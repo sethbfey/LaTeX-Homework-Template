@@ -9,17 +9,21 @@
 
 % --- REQUIRED STRUCTURAL PACKAGES ---
 \RequirePackage[T1]{fontenc}
-\RequirePackage{babel}
+\RequirePackage[english]{babel}
 \RequirePackage[hmargin=1.50in, tmargin=0.75in]{geometry}
 \RequirePackage{eulervm}  % font
 \RequirePackage{amsthm}   % for \qed symbol
 \RequirePackage{tabularx} % for bottom section X column
+\RequirePackage{enumitem} % better enumeration control
+\RequirePackage{array}    % better math arrays
+\RequirePackage{multirow} % multi-row tables/matrices
+\RequirePackage{hyperref} % ensure to load last to avoid package conflicts
 
 % --- GLOBAL SETTINGS ---
 \setlength{\parindent}{0pt}
 \newlength{\hiddenlen}
 \setlength{\hiddenlen}{0.1\textwidth}
-\newcommand{\widebar}[1]{\par\hrule height #1\relax\par}
+\newcommand{\hwrule}[1]{\par\hrule height #1\relax\par}
 \newcommand{\bsl}{\vspace{\baselineskip}}
 
 
@@ -63,9 +67,9 @@
     }
 
     \vspace{0.04\textheight}
-        
+
     {% --- MIDDLE SECTION ---
-        \widebar{1pt}
+        \hwrule{1pt}
 
         \vspace{0.03\textheight}
 
@@ -74,11 +78,11 @@
 
         \vspace{0.03\textheight}
 
-        \widebar{1pt}
+        \hwrule{1pt}
 
         \vspace{0.003\textheight}
 
-        \widebar{1pt}
+        \hwrule{1pt}
         \par
     }
 
@@ -93,19 +97,16 @@
         \end{tabularx}
         \par
     }
-    
-    \clearpage 
+
+    \clearpage
     \setcounter{page}{1}
 }
 
 
-% ========================================
-% EXERCISE ENV
-% ========================================
-
+% --- EXERCISE ENV ---
 \newenvironment{exercise}[1]{%
     \par
-    \widebar{1pt}
+    \hwrule{1pt}
 
     \vspace{0.02\textheight}
 
@@ -116,7 +117,7 @@
 
     \vspace{0.02\textheight}
 
-    \widebar{1pt}
+    \hwrule{1pt}
     \par
 
     \vspace{0.02\textheight}
@@ -124,9 +125,7 @@
     \ignorespacesafterend
 }
 
-% ========================================
-% SOLUTION ENV
-% ========================================
+% --- SOLUTION ENV ---
 \newenvironment{solution}{%
     \par
     \noindent\textbf{SOLUTION.}\quad
