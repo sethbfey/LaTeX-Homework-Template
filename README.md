@@ -1,8 +1,6 @@
 # LaTeX Homework Template
 
-A minimalistic, modular LaTeX class and style collection designed for university homework. 
-
-The core idea of this project is to keep your document preamble completely uncluttered. Instead of copying and pasting fifty lines of `\usepackage` statements into every new assignment, this template separates concerns into modular toolkits. Simply load the packages you need for the specific assignment and start writing.
+A minimalistic, modular LaTeX class and style collection designed for university homework.
 
 ## Repository Structure
 
@@ -18,7 +16,7 @@ To make these files globally available to all your LaTeX projects without clutte
 
 Based on macOS/Linux, place the files here:
 ```bash
-~/Library/texmf/tex/latex/local/latex-homework-template/
+$ ~/Library/texmf/tex/latex/local/latex-homework-template/
 ```
 
 *Note: Depending on your TeX distribution, you may need to run `texhash` in your terminal to update the file database.*
