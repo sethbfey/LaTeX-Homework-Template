@@ -3,27 +3,19 @@
 \ProvidesPackage{mymath}
 
 % --- CORE MATH PACKAGES ---
-\RequirePackage{mathtools}      % loads amsmath internally
+\RequirePackage{mathtools}      % math typsetting
 \RequirePackage{amssymb}        % standard math symbols
-\RequirePackage{amsthm}         % theorem environments
 \RequirePackage{amsfonts}       % standard math fonts
-\RequirePackage[mathcal]{eucal} % euler calligraphic font 
+\RequirePackage[mathcal]{eucal} % euler calligraphic font
 
 % --- EXTENDED MATH PACKAGES ---
 \RequirePackage{amscd}   % commutative diagrams
-\RequirePackage{physics} % better looking derivatives, matrices, and bra-ket 
-\RequirePackage{braket}  % set builder notation
+\RequirePackage{physics} % better looking derivatives, matrices, and bra-ket
 \RequirePackage{bm}      % bold math symbols
 
-% --- UTILITY PACKAGES ---
-\RequirePackage{hyperref} % hyperlinks in references
-\RequirePackage{enumitem} % better enumeration control
-\RequirePackage{array}    % better math arrays
-\RequirePackage{multirow} % multi-row tables/matrices 
-
 % --- MATH REDEFINITIONS ---
-\let\epsilon\varepsilon 
-\let\setminus\smallsetminus 
+\let\epsilon\varepsilon
+\let\setminus\smallsetminus
 
 % --- CUSTOM MATH COMMANDS ---
 \newcommand{\R}{\mathbb{R}}
